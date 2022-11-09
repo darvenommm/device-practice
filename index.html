@@ -11,7 +11,7 @@
     <!-- header -->
     <header class="header container">
       <a class="logo header__logo">
-        <!-- svg Логотипа -->
+        <svg width="145" height="36" viewBox="0 0 145 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.22 0v35.3h-7.6v-2.4c-1.7 1.9-4.1 3.1-7.51 3.1C5.5 36 0 30.2 0 22.7 0 15.2 5.5 9.4 12.1 9.4c3.41 0 5.91 1.2 7.51 3.1V0h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6.01-6.2-3.5 0-6 2.4-6 6.2 0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2ZM43.73 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14.01-5.8-14.01-13.3 0-7.5 5.4-13.3 13.4-13.3 7.41 0 12.82 5.7 12.82 13.3 0 1.1-.1 2.1-.3 3H37.63c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9ZM82.16 10.1l-9.31 25.2h-8.6l-9.31-25.2h8.4l5.3 16 5.31-16h8.2ZM83.46 10.1h7.6v25.2h-7.6V10.1ZM93.67 22.7c0-7.5 5.7-13.3 13.4-13.3 4.9 0 9.21 2.6 11.41 6.5l-6.6 3.8c-.9-1.8-2.7-2.8-4.9-2.8-3.3 0-5.71 2.4-5.71 5.8 0 3.5 2.4 5.8 5.7 5.8 2.2 0 4.1-1.1 4.9-2.8l6.61 3.8c-2.1 3.9-6.4 6.5-11.4 6.5-7.71 0-13.41-5.8-13.41-13.3ZM132.9 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.61 0-14.02-5.8-14.02-13.3 0-7.5 5.5-13.3 13.41-13.3 7.4 0 12.81 5.7 12.81 13.3 0 1.1-.1 2.1-.3 3h-17.91c1 2.6 3.3 3.5 6.1 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-2.91 0-4.81 1.4-5.51 4h10.9Z" fill="#000"/><path d="M83.46 0v10.1L91.06 0h-7.6Z" fill="#510094"/></svg>
         <span class="visually-hidden">Логотип сайта на котором написано Девайс.</span>
       </a>
       <div class="header__search">
@@ -43,6 +43,8 @@
         <div class="header__catalog">
           <p class="header__catalog-text">Каталог товаров</p>
           <button class="header__catalog-button">
+            <svg class="header__catalog-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" fill="#000"/></svg>
+            <svg class="header__catalog-minus hide" width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0H0v2h16V0Z" fill="#000"/></svg>
             <span class="visually-hidden">При нажатие покажется список ссылок на каталоги товаров.</span>
           </button>
           <div class="header__catalog-lists hide">
@@ -94,7 +96,7 @@
         <h2 class="visually-hidden">Слайдер с товарами.</h2>
         <ul class="hero__slider">
           <li class="hero__slider-item hero__slider-item--active">
-            <img class="hero__slider-image" src="#" alt="Квадрокоптер с лазером.">
+            <img class="hero__slider-image" src="./images/slider/quadcopter.png" alt="Квадрокоптер с лазером.">
             <div class="hero__slider-descr">
               <p class="hero__slider-title">
                 Порхает как бабочка,
@@ -127,7 +129,7 @@
                 в&nbsp;себе силы не&nbsp;пропускать занятия
                 и&nbsp;соблюдать диету.
               </p>
-              <a class="link hero__slider-link" href="#">Подробнее</a>
+              <a class="link hero__slider-link" href="./images/slider/smart-watch.png">Подробнее</a>
               <ul class="hero__slider-list">
                 <li class="hero__slider-item">
                   <p class="hero__slider-value">48&nbsp;часов</p>
@@ -137,7 +139,7 @@
             </div>
           </li>
           <li class="hero__slider-item">
-            <img class="hero__slider-image" src="#" alt="Три селфи палки.">
+            <img class="hero__slider-image" src="./images/slider/selfie-stick.png" alt="Три селфи палки.">
             <div class="hero__slider-descr">
               <p class="hero__slider-title">Делай селфи, как Бен Стиллер!</p>
               <p class="hero__slider-text">
@@ -195,7 +197,7 @@
           <li class="goods__item">
             <a class="goods__link" href="#">
               <div class="goods__image-container">
-                <img class="goods__image" src="#" alt="Шлем виртуальной реальности.">
+                <img class="goods__image" src="./images/goods/vr-helmer.svg" alt="Шлем виртуальной реальности.">
               </div>
               <h3 class="goods__title">Виртуальная реальность</h3>
             </a>
@@ -203,7 +205,7 @@
           <li class="goods__item">
             <a class="goods__link" href="#">
               <div class="goods__image-container">
-                <img class="goods__image" src="#" alt="Селфи палка с телефоном.">
+                <img class="goods__image" src="./images/goods/selfie-stick.svg" alt="Селфи палка с телефоном.">
               </div>
               <h3 class="goods__title">Моноподы для селфи</h3>
             </a>
@@ -211,7 +213,7 @@
           <li class="goods__item">
             <a class="goods__link" href="#">
               <div class="goods__image-container">
-                <img class="goods__image" src="#" alt="Камера.">
+                <img class="goods__image" src="./images/goods/camera.svg" alt="Камера.">
               </div>
               <h3 class="goods__title">Экшн-камеры</h3>
             </a>
@@ -219,7 +221,7 @@
           <li class="goods__item">
             <a class="goods__link" href="#">
               <div class="goods__image-container">
-                <img class="goods__image" src="#" alt="Браслет.">
+                <img class="goods__image" src="./images/goods/fitness-bracelet.svg" alt="Браслет.">
               </div>
               <h3 class="goods__title">Фитнес-браслеты</h3>
             </a>
@@ -227,7 +229,7 @@
           <li class="goods__item">
             <a class="goods__link" href="#">
               <div class="goods__image-container">
-                <img class="goods__image" src="#" alt="Наручные часы.">
+                <img class="goods__image" src="./images/goods/smart-watch.svg" alt="Наручные часы.">
               </div>
               <h3 class="goods__title">Умные часы</h3>
             </a>
@@ -235,7 +237,7 @@
           <li class="goods__item">
             <a class="goods__link" href="#">
               <div class="goods__image-container">
-                <img class="goods__image" src="#" alt="Квадрокоптер.">
+                <img class="goods__image" src="./images/goods/quadcopter.svg" alt="Квадрокоптер.">
               </div>
               <h3 class="goods__title">Квадрокоптеры</h3>
             </a>
@@ -266,7 +268,7 @@
                 мы&nbsp;неплохо заработаем, поднимая его на&nbsp;ваш этаж.
               </p>
             </div>
-            <img class="service__image" src="#" alt="Человечек, который бежит доставлять товар.">
+            <img class="service__image" src="./images/service/service-delivery.svg" alt="Человечек, который бежит доставлять товар.">
           </li>
           <li class="service__item">
             <div class="service__descr">
@@ -277,7 +279,7 @@
                 Товар, не&nbsp;дом, конечно&nbsp;же.
               </p>
             </div>
-            <img class="service__image" src="#" alt="Телефон из которого вышло диалоговое облако с отвёрткой и гаечным ключом.">
+            <img class="service__image" src="./images/service/service-guarantee.svg" alt="Телефон из которого вышло диалоговое облако с отвёрткой и гаечным ключом.">
           </li>
           <li class="service__item">
             <div class="service__descr">
@@ -288,7 +290,7 @@
                 выгодные условия кредита. Выгодные для банка, разумеется.
               </p>
             </div>
-            <img class="service__image" src="#" alt="Человечек, который несёт на спине огромную кредитную карту.">
+            <img class="service__image" src="./images/service/service-credit.svg" alt="Человечек, который несёт на спине огромную кредитную карту.">
           </li>
         </ul>
       </section>
@@ -297,11 +299,11 @@
         <h2 class="visually-hidden">Форма для доставки товаров.</h2>
         <a class="delivery__link" href="#">
           <div class="delivery__image-container">
-            <img class="delivery__image" src="#" alt="Грузовик.">
+            <img class="delivery__image" src="./images/icons/truck.svg" alt="Грузовик.">
           </div>
           <p class="delivery__text">Доставим редкий товар под заказ</p>
           <div class="delivery__info">
-            <!-- svg icon -->
+            <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#000"><path d="M2 0H0v2h2V0ZM2 4H0v8h2V4Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h2v12H0z"/></clipPath></defs></svg>
           </div>
         </a>
       </section>
@@ -373,7 +375,7 @@
     <!-- footer -->
     <footer class="footer container">
       <a class="logo footer__logo">
-        <!-- svg Логотипа -->
+        <svg width="145" height="36" viewBox="0 0 145 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.22 0v35.3h-7.6v-2.4c-1.7 1.9-4.1 3.1-7.51 3.1C5.5 36 0 30.2 0 22.7 0 15.2 5.5 9.4 12.1 9.4c3.41 0 5.91 1.2 7.51 3.1V0h7.6Zm-7.6 22.7c0-3.8-2.5-6.2-6.01-6.2-3.5 0-6 2.4-6 6.2 0 3.8 2.5 6.2 6 6.2 3.5-.1 6-2.4 6-6.2ZM43.73 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.6 0-14.01-5.8-14.01-13.3 0-7.5 5.4-13.3 13.4-13.3 7.41 0 12.82 5.7 12.82 13.3 0 1.1-.1 2.1-.3 3H37.63c1 2.6 3.3 3.5 6.1 3.5Zm4.6-9.1c-.8-2.9-3.1-4-5.4-4-2.9 0-4.8 1.4-5.5 4h10.9ZM82.16 10.1l-9.31 25.2h-8.6l-9.31-25.2h8.4l5.3 16 5.31-16h8.2ZM83.46 10.1h7.6v25.2h-7.6V10.1ZM93.67 22.7c0-7.5 5.7-13.3 13.4-13.3 4.9 0 9.21 2.6 11.41 6.5l-6.6 3.8c-.9-1.8-2.7-2.8-4.9-2.8-3.3 0-5.71 2.4-5.71 5.8 0 3.5 2.4 5.8 5.7 5.8 2.2 0 4.1-1.1 4.9-2.8l6.61 3.8c-2.1 3.9-6.4 6.5-11.4 6.5-7.71 0-13.41-5.8-13.41-13.3ZM132.9 29.2c2.1 0 3.8-.8 4.8-1.9l6.1 3.5c-2.5 3.4-6.2 5.2-11 5.2-8.61 0-14.02-5.8-14.02-13.3 0-7.5 5.5-13.3 13.41-13.3 7.4 0 12.81 5.7 12.81 13.3 0 1.1-.1 2.1-.3 3h-17.91c1 2.6 3.3 3.5 6.1 3.5Zm4.7-9.1c-.8-2.9-3.1-4-5.4-4-2.91 0-4.81 1.4-5.51 4h10.9Z" fill="#000"/><path d="M83.46 0v10.1L91.06 0h-7.6Z" fill="#510094"/></svg>
         <span class="visually-hidden">Логотип сайта на котором написано Девайс.</span>
       </a>
       <p class="footer__address">
@@ -395,19 +397,19 @@
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <!-- svg -->
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.44.07.62 4.63c-.8.33-.8.78-.14.98l3.03.94 7.02-4.43c.33-.2.64-.09.39.13l-5.7 5.13-.2 3.13c.3 0 .44-.14.61-.3l1.48-1.44 3.06 2.27c.57.31.97.15 1.12-.53l2-9.48c.21-.83-.3-1.2-.85-.96Z" fill="#444"/></svg>
              <span class="visually-hidden">Телеграм.</span>
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <!-- svg -->
+              <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.67 1.67c-.1-.32-.27-.61-.51-.84-.25-.24-.56-.41-.9-.5C13.01 0 8 0 8 0 5.9-.02 3.8.08 1.74.32 1.4.4 1.1.58.84.82c-.24.24-.42.53-.51.85A19.4 19.4 0 0 0 0 5.34C0 6.56.1 7.79.33 9c.09.32.27.61.51.85.25.23.56.4.9.5 1.27.32 6.26.32 6.26.32 2.09.02 4.18-.08 6.26-.31.34-.09.65-.26.9-.5.24-.23.42-.52.5-.84.24-1.21.35-2.44.34-3.67.02-1.23-.1-2.46-.33-3.68ZM6.4 7.62V3.05l4.18 2.29L6.4 7.62Z" fill="#444"/></svg>
              <span class="visually-hidden">Ютюб.</span>
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <!-- svg -->
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.7.2c1.5-.5 2.6.3 3.2 1l1.7-.5a2 2 0 0 1-.8 1.6c.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4C4 14 .6 13.7 0 12.3c2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2C1.5 7.8.3 7 .4 5c.3.3.9.5 1.2.4C1 5.3-.2 2.4.8.9c1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z" fill="#444"/></svg>
               <span class="visually-hidden">Твиттер.</span>
             </a>
           </li>
@@ -415,7 +417,9 @@
       </div>
       <div class="footer__right-container">
         <a class="footer__phone" href="tel:78128121212">Тел.: +7 (812) 812-12-12</a>
-        <img class="footer__html-academy-logo" src="#" alt="Логотип html academy.">
+        <a class="footer__html-academy-link" href="#">
+          <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" fill="#FFC700"/></svg>
+        </a>
       </div>
     </footer>
   </body>
