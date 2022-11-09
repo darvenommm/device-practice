@@ -8,6 +8,84 @@
     <link rel="stylesheet" href="./styles/index.css">
   </head>
   <body>
-    <h1>Hello world</h1>
+    <!-- header -->
+    <header class="header">
+      <div class="logo header__logo">
+        <a class="logo__link">
+          <!-- svg Логотипа -->
+          <span class="visually-hidden">Логотип сайта на котором написано Девайс.</span>
+        </a>
+      </div>
+      <div class="header__search">
+        <label class="visually-hidden" for="header__search-input">Поле для поиска товаров по сайту.</label>
+        <input class="header__search-input" id="header__search-input" type="text" placeholder="Поиск по сайту.">
+        <button class="header__search-button" type="button">Найти</button>
+      </div>
+      <a class="header__account-link" href="#">
+        Войти<span class="visually-hidden">в аккаунт.</span>
+      </a>
+      <a class="header__compare-link" href="#">
+        Сравнить<span class="visually-hidden">товары.</span>
+      </a>
+      <div class="header__cart">
+        <a class="header__cart-button" href="#">
+          <span class="header__cart-count">0</span>
+          Корзина<span class="visually-hidden">товаров.</span>
+        </a>
+        <div class="header__cart-popover">
+          <div class="header__cart-popover-goods"></div>
+          <div class="header__cart-popover-calculater">
+            <span class="header__cart-popover-count">Товаров: <span>0</span></span>
+            <span class="header__cart-popover-amount">Сумма: <span>2000&nbsp;₽</span></span>
+          </div>
+          <a class="header__cart-popover-link" href="#">Открыть корзину</a>
+        </div>
+      </div>
+      <nav class="header__navigation">
+        <div class="header__catalog">
+          <p class="header__catalog-text">Каталог товаров</p>
+          <button class="header__catalog-button">
+            <span class="visually-hidden">При нажатие покажется список ссылок на каталоги товаров.</span>
+          </button>
+          <div class="header__catalog-lists">
+            <ul class="header__catalog-list">
+              <li class="header__catalog-item">
+                <a class="header__catalog-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="header__catalog-list">
+              <li class="header__catalog-item">
+                <a class="header__catalog-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="header__catalog-item">
+                <a class="header__catalog-link" href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="header__catalog-list">
+              <li class="header__catalog-item">
+                <a class="header__catalog-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Доставка</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Гарантия</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
