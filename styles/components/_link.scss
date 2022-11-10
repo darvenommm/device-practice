@@ -1,7 +1,9 @@
 @import "../base/variables";
 
 .link {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   font-family: 'Raleway';
   font-weight: 800;
@@ -15,18 +17,16 @@
   border: none;
   cursor: pointer;
   background-color: inherit;
-  margin: 0 35px;
 
   &::before {
     position: absolute;
     top: 6px;
     bottom: 7px;
-    left: -35px;
-    right: -35px;
     z-index: -1;
 
     background-color: $yellow;
 
+    width: 100%;
     content: "";
   }
 }
