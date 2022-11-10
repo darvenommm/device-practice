@@ -2,11 +2,16 @@
 @import "./components/header";
 @import "./components/hero";
 @import "./components/goods";
+@import "./components/service";
 
 .hero {
   margin-bottom: 70px;
 }
 
 .goods {
+  margin-bottom: 70px;
+}
+
+.service {
   margin-bottom: 70px;
 }
