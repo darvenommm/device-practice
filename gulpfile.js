@@ -24,7 +24,7 @@ function clearStyles() {
 }
 
 function stylesWatcher() {
-  watch(`${stylesPath}/*.scss`, series(clearStyles, compileScssFile));
+  watch(`${stylesPath}/**/*.scss`, series(clearStyles, compileScssFile));
 }
 
 export default series(clearStyles, compileScssFile, stylesWatcher);
