@@ -1,0 +1,120 @@
+@import "../base/variables";
+
+.footer {
+  position: relative;
+
+  background-color: $dark-gray;
+  color: $white;
+
+  &__container {
+    display: flex;
+  }
+
+  &__left-container {
+    margin-top: 62px;
+    margin-right: 119px;
+    width: 239px;
+  }
+
+  &__logo {
+    display: inline-block;
+    color: $orange;
+    margin-bottom: 35px;
+  }
+
+  &__address {
+    position: relative;
+
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: -64px;
+
+      background-color: $orange;
+
+      width: 80px;
+      height: 7px;
+      content: "";
+    }
+  }
+
+  &__central-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 137px;
+    margin-right: auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 128px);
+    gap: 20px 35px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 62px;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  &__social-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 61px;
+  }
+
+  &__social-item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $dark-gray;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 140px;
+  }
+
+  &__phone {
+    display: inline-block;
+    color: $white;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 63px;
+  }
+
+  &__html-academy-link {
+    color: $orange;
+  }
+}
