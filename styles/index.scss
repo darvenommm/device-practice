@@ -3,6 +3,7 @@
 @import "./components/hero";
 @import "./components/goods";
 @import "./components/service";
+@import "./components/delivery";
 
 .hero {
   margin-bottom: 70px;
@@ -13,5 +14,9 @@
 }
 
 .service {
+  margin-bottom: 70px;
+}
+
+.delivery {
   margin-bottom: 70px;
 }
