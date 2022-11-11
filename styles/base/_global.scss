@@ -48,3 +48,14 @@ input {
 button {
   cursor: pointer;
 }
+
+%focus-pseudoclass {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+
+  border: 2px solid $purple;
+  content: "";
+}

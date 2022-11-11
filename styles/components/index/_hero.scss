@@ -61,14 +61,7 @@
       }
 
       &:focus-visible::after {
-        position: absolute;
-        top: -4px;
-        bottom: -4px;
-        left: -4px;
-        right: -4px;
-        border: 2px solid $purple;
-
-        content: "";
+        @extend %focus-pseudoclass;
       }
 
       &:disabled {
@@ -128,14 +121,7 @@
         }
 
         &:focus-visible::after {
-          position: absolute;
-          top: -4px;
-          bottom: -4px;
-          left: -4px;
-          right: -4px;
-
-          border: 2px solid $purple;
-          content: "";
+          @extend %focus-pseudoclass;
         }
       }
     }

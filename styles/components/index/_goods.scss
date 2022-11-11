@@ -12,8 +12,23 @@
   }
 
   &__link {
+    position: relative;
+
     text-decoration: none;
     color: $black;
+    outline: none;
+
+    &:focus-visible::before {
+      @extend %focus-pseudoclass;
+    }
+  }
+
+  &__link:hover &__image-container {
+    background-color: $orange;
+  }
+
+  &__link:active &__image-container {
+    opacity: 0.3;
   }
 
   &__image-container {
@@ -25,8 +40,8 @@
 
     width: 160px;
     height: 160px;
-
     margin-bottom: 32px;
+    transition: all 0.2s;
 
     &--position--bottom {
       align-items: end;
