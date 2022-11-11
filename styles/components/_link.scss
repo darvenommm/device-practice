@@ -27,7 +27,25 @@
 
     background-color: $yellow;
 
+    transition: top 0.5s, bottom 0.5s;
     width: 100%;
     content: "";
+  }
+
+  &:hover::before {
+    top: 0;
+    bottom: 0;
+  }
+
+  &:active::before {
+    background-color: $orange;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $purple;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
