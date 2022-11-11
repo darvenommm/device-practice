@@ -44,32 +44,53 @@
         color: rgba($black, 0.3);
       }
 
+      &:focus,
       &:focus-visible {
         outline: none;
       }
-    }
 
-    &-label {
-      cursor: text;
-
-      &::before {
+      &:focus-visible ~ &-before {
         position: absolute;
-        top: 13px;
-        left: 16px;
+        top: -3px;
+        bottom: -3px;
+        right: 157px;
+        left: -3px;
         z-index: 1;
+        border: 2px solid $purple;
+      }
 
-        background-image: url("../images/icons/search.svg");
-        background-repeat: no-repeat;
-        background-size: 16px 16px;
+      &:disabled {
+        opacity: 0.3;
+      }
 
-        width: 16px;
-        height: 16px;
+      &:disabled ~ &-label {
+        opacity: 0.3;
+      }
 
-        content: "";
+      &-label {
+        cursor: text;
+
+        &::before {
+          position: absolute;
+          top: 13px;
+          left: 16px;
+          z-index: 1;
+
+          background-image: url("../images/icons/search.svg");
+          background-repeat: no-repeat;
+          background-size: 16px 16px;
+
+          width: 16px;
+          height: 16px;
+
+          content: "";
+        }
       }
     }
 
     &-button {
+      position: relative;
+
       width: 160px;
       padding: 10px 56px;
       border: 2px solid $black;
@@ -82,6 +103,33 @@
       line-height: 20px;
       text-align: center;
       color: $black;
+      outline: none;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+
+      &:active {
+        background-color: $black;
+        color: rgba($white, 0.3);
+
+        &:focus-visible {
+          color: $white;
+        }
+      }
+
+      &:focus-visible::after {
+        position: absolute;
+        top: -5px;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
+
+        border: 2px solid $purple;
+
+        content: "";
+      }
     }
   }
 
@@ -150,6 +198,10 @@
 
     display: flex;
 
+    &:focus-within &-popover-container {
+      display: block;
+    }
+
     &-button {
       position: relative;
 
@@ -205,6 +257,31 @@
       background-color: $black;
 
       width: 320px;
+
+      &::before {
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 10px;
+        height: 10px;
+        background-color: $black;
+        transform: rotate(45deg);
+
+        content: "";
+      }
+
+      &-none {
+        display: flex;
+        justify-content: center;
+
+        font-size: 18px;
+        line-height: 20px;
+        color: $white;
+
+        margin: 20px;
+      }
 
       &-calculation {
         display: flex;
@@ -277,10 +354,27 @@
 
   // catalog
   &__catalog {
+    position: relative;
+
     display: flex;
+    align-items: center;
 
     width: 293px;
     margin-right: 60px;
+
+    &:focus-within {
+      & .header__catalog-lists-container {
+        display: block;
+      }
+
+      & .header__catalog-plus {
+        display: none;
+      }
+
+      & .header__catalog-minus {
+        display: block;
+      }
+    }
 
     &-text {
       font-family: "Raleway";
@@ -304,12 +398,33 @@
       border-radius: 50%;
       opacity: 0.3;
       background-color: inherit;
+      outline: none;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:focus-visible {
+        opacity: 1;
+      }
+
+      &:focus-visible::after {
+        position: absolute;
+        top: -2px;
+        bottom: 0;
+        left: -2px;
+        right: -2px;
+
+        border: 2px solid $purple;
+
+        content: "";
+      }
     }
 
     &-lists {
       position: absolute;
-      top: 100%;
-      left: 0;
+      top: 101%;
+      left: -60px;
       z-index: 1;
 
       display: flex;

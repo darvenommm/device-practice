@@ -17,8 +17,9 @@
       <div class="header__top-container">
         <div class="header__search">
           <input class="header__search-input" id="header__search-input" type="text" placeholder="Поиск по сайту"
+          ><span class="header__search-input-before"></span
           ><button class="header__search-button" type="button">Найти</button>
-          <label class="header__search-label" for="header__search-input">
+          <label class="header__search-input-label" for="header__search-input">
             <span class="visually-hidden">Поле для поиска товаров по сайту.</span>
           </label>
         </div>
@@ -38,10 +39,12 @@
             </a>
             <div class="header__cart-popover-container hide">
               <div class="header__cart-popover">
-                <div class="header__cart-popover-goods"></div>
+                <div class="header__cart-popover-goods">
+                  <p class="header__cart-popover-none">В вашей корзине нет товаров</p>
+                </div>
                 <div class="header__cart-popover-calculation">
                   <span class="header__cart-popover-text">Товаров: <span>0</span></span>
-                  <span class="header__cart-popover-text">Сумма: <span>2000&nbsp;₽</span></span>
+                  <span class="header__cart-popover-text">Сумма: <span>0</span>&nbsp;₽</span>
                 </div>
                 <a class="header__cart-popover-link" href="#">Открыть корзину</a>
               </div>
@@ -57,7 +60,7 @@
             <svg class="header__catalog-minus hide" width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0H0v2h16V0Z" fill="#000"/></svg>
             <span class="visually-hidden">При нажатие покажется список ссылок на каталоги товаров.</span>
           </button>
-          <div class="header__catalog-list-container hide">
+          <div class="header__catalog-lists-container hide">
             <div class="header__catalog-lists">
               <ul class="header__catalog-list">
                 <li class="header__catalog-item">
