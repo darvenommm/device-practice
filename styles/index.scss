@@ -1,12 +1,12 @@
 @import "./base/base";
 @import "./components/header";
-@import "./components/hero";
-@import "./components/goods";
-@import "./components/service";
-@import "./components/delivery";
-@import "./components/about-us";
-@import "./components/contacts";
-@import "./components/mailing";
+@import "./components/index/hero";
+@import "./components/index/goods";
+@import "./components/index/service";
+@import "./components/index/delivery";
+@import "./components/index/about-us";
+@import "./components/index/contacts";
+@import "./components/index/mailing";
 @import "./components/footer";
 
 .hero {
