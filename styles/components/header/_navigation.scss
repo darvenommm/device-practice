@@ -1,0 +1,33 @@
+@import "../../base/variables";
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+
+  // navigation list
+  &-list {
+    display: flex;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  &-item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+
+  &-link {
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}

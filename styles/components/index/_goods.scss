@@ -1,0 +1,46 @@
+@import "../../base/variables";
+
+.goods {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 160px);
+    gap: 20px 40px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $yellow;
+
+    width: 160px;
+    height: 160px;
+
+    margin-bottom: 32px;
+
+    &--position--bottom {
+      align-items: end;
+    }
+  }
+
+  &__title {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+
+    margin: 0;
+    margin-bottom: 14px;
+  }
+}

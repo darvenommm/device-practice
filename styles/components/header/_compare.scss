@@ -1,0 +1,22 @@
+@import "../../base/variables";
+
+.header__compare-link {
+  position: relative;
+
+  padding-left: 22px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    background-image: url("../images/icons/compare.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 12px;
+
+    width: 10px;
+    height: 12px;
+    content: "";
+  }
+}

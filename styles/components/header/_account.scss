@@ -1,0 +1,31 @@
+@import "../../base/variables";
+
+.header__account {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 231px;
+  margin-right: 24px;
+
+  &-link {
+    position: relative;
+
+    padding-left: 27px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      background-image: url("../images/icons/account.svg");
+      background-repeat: no-repeat;
+      background-size: 13px 12px;
+
+      width: 13px;
+      height: 12px;
+      content: "";
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@import "../../base/variables";
+
+.service {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 102px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    background-color: $lighter;
+
+    content: "";
+  }
+
+  &__container {
+    display: flex;
+    padding-bottom: 72px;
+  }
+
+  &__tabs {
+    position: relative;
+
+    margin: 0;
+    margin-right: 116px;
+    padding: 0;
+    list-style: none;
+
+    width: 287px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      background-color: $black;
+
+      width: 7px;
+      content: "";
+    }
+  }
+
+  &__tab {
+    margin-bottom: 35px;
+
+    &:first-child {
+      margin-top: 64px;
+    }
+
+    &:last-child {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__tab-button {
+    padding: 10px 0;
+    width: 160px;
+
+    &--active {
+      justify-content: start;
+      background-color: $black;
+      color: $yellow;
+      padding: 10px 18px;
+      width: 280px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: none;
+
+    &--current {
+      display: flex;
+    }
+  }
+
+  &__descr {
+    width: 453px;
+    margin-right: 106px;
+  }
+
+  &__subtitle {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: $black;
+
+    margin-top: 73px;
+    margin-bottom: 34px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__image {
+    margin-top: 78px;
+  }
+}

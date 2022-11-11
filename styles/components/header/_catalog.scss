@@ -1,0 +1,109 @@
+@import "../../base/variables";
+
+.header__catalog {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 293px;
+  margin-right: 60px;
+
+  &:focus-within {
+    & .header__catalog-lists-container {
+      display: block;
+    }
+
+    & .header__catalog-plus {
+      display: none;
+    }
+
+    & .header__catalog-minus {
+      display: block;
+    }
+  }
+
+  &-text {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $black;
+
+    margin-right: 7px;
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.3;
+    background-color: inherit;
+    outline: none;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      opacity: 1;
+    }
+
+    &:focus-visible::after {
+      position: absolute;
+      top: -2px;
+      bottom: 0;
+      left: -2px;
+      right: -2px;
+
+      border: 2px solid $purple;
+
+      content: "";
+    }
+  }
+
+  &-lists {
+    position: absolute;
+    top: 101%;
+    left: -60px;
+    z-index: 1;
+
+    display: flex;
+
+    background-color: $yellow;
+
+    padding: 15px 60px 60px;
+
+    width: $container-width;
+  }
+
+  &-list {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    max-width: 220px;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-link {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
