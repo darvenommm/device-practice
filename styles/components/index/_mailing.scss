@@ -55,9 +55,19 @@
       color: $dark-gray;
       opacity: 0.5;
     }
+
+    &:focus-visible {
+      background-color: $gray;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-bottom-color: $error;
+    }
   }
 
   &__submit {
+    position: relative;
+
     width: 253px;
     background-color: inherit;
     border: 3px solid $lighter-gray;
@@ -69,6 +79,32 @@
     line-height: 21px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    transition: all 0.15s;
+    outline: none;
+
+    &:hover {
+      border-color: $black;
+    }
+
+    &:active {
+      border-color: $black;
+      opacity: 0.3;
+    }
+
+    &:focus-visible::before {
+      position: absolute;
+      top: -6px;
+      bottom: -6px;
+      left: -6px;
+      right: -6px;
+
+      border: 2px solid $purple;
+      content: "";
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
   }
 
   &__post-scriptum {
@@ -84,6 +120,11 @@
       top: 7px;
       left: -25px;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: $green;
       background-image: url("../images/icons/checkbox-free.svg");
       background-repeat: no-repeat;
 
