@@ -1,0 +1,18 @@
+@import "../base/variables";
+
+.logo {
+  position: relative;
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus-visible::after {
+    @extend %focus-pseudoclass;
+  }
+}
