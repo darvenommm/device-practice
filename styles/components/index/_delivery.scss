@@ -10,6 +10,7 @@
 
     text-decoration: none;
     color: $black;
+    outline: none;
 
     &::before {
       position: absolute;
@@ -18,11 +19,28 @@
       left: 0;
       right: 0;
       z-index: -1;
+      transition: all 0.2s;
 
       background-color: $lighter;
 
       content: "";
     }
+
+    &:focus-visible::after {
+      @extend %focus-pseudoclass;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__link:hover &__image-container {
+    background-color: $orange;
+  }
+
+  &__link:hover &__info-icon {
+    opacity: 1;
   }
 
   &__image-container {
@@ -32,6 +50,7 @@
 
     width: 125px;
     height: 100px;
+    transition: all 0.1s;
 
     background-color: $yellow;
   }
@@ -67,6 +86,7 @@
     border-radius: 50%;
 
     &-icon {
+      transition: all 0.1s;
       opacity: 0.3;
     }
   }
