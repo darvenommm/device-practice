@@ -36,13 +36,15 @@
               <span class="header__cart-count">0</span>
               Корзина<span class="visually-hidden"> товаров.</span>
             </a>
-            <div class="header__cart-popover hide">
-              <div class="header__cart-popover-goods"></div>
-              <div class="header__cart-popover-calculation">
-                <span class="header__cart-popover-text">Товаров: <span>0</span></span>
-                <span class="header__cart-popover-text">Сумма: <span>2000&nbsp;₽</span></span>
+            <div class="header__cart-popover-container hide">
+              <div class="header__cart-popover">
+                <div class="header__cart-popover-goods"></div>
+                <div class="header__cart-popover-calculation">
+                  <span class="header__cart-popover-text">Товаров: <span>0</span></span>
+                  <span class="header__cart-popover-text">Сумма: <span>2000&nbsp;₽</span></span>
+                </div>
+                <a class="header__cart-popover-link" href="#">Открыть корзину</a>
               </div>
-              <a class="header__cart-popover-link" href="#">Открыть корзину</a>
             </div>
           </div>
         </div>
@@ -55,31 +57,33 @@
             <svg class="header__catalog-minus hide" width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0H0v2h16V0Z" fill="#000"/></svg>
             <span class="visually-hidden">При нажатие покажется список ссылок на каталоги товаров.</span>
           </button>
-          <div class="header__catalog-lists hide">
-            <ul class="header__catalog-list">
-              <li class="header__catalog-item">
-                <a class="header-link header__catalog-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="header__catalog-item">
-                <a class="header-link header__catalog-link" href="#">Моноподы для cелфи</a>
-              </li>
-              <li class="header__catalog-item">
-                <a class="header-link header__catalog-link" href="#">Экшн-камеры</a>
-              </li>
-            </ul>
-            <ul class="header__catalog-list">
-              <li class="header__catalog-item">
-                <a class="header-link header__catalog-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="header__catalog-item">
-                <a class="header-link header__catalog-link" href="#">Умные часы</a>
-              </li>
-            </ul>
-            <ul class="header__catalog-list">
-              <li class="header__catalog-item">
-                <a class="header-link header__catalog-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
+          <div class="header__catalog-list-container hide">
+            <div class="header__catalog-lists">
+              <ul class="header__catalog-list">
+                <li class="header__catalog-item">
+                  <a class="header-link header__catalog-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="header__catalog-item">
+                  <a class="header-link header__catalog-link" href="#">Моноподы для cелфи</a>
+                </li>
+                <li class="header__catalog-item">
+                  <a class="header-link header__catalog-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="header__catalog-list">
+                <li class="header__catalog-item">
+                  <a class="header-link header__catalog-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="header__catalog-item">
+                  <a class="header-link header__catalog-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="header__catalog-list">
+                <li class="header__catalog-item">
+                  <a class="header-link header__catalog-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <ul class="header__navigation-list">
