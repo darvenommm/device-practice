@@ -1,0 +1,361 @@
+@import "../../base/variables";
+@import "../../base/global";
+
+.goods {
+  &__sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 26px 40px;
+
+    &-title {
+      font-family: "Raleway";
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: $black;
+      margin: 0;
+    }
+
+    &-select {
+      background-color: inherit;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+      outline: none;
+      padding-right: 30px;
+      cursor: pointer;
+
+      &-container {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 12px;
+          right: 8px;
+
+          background-image: url("../images/arrows/bottom-arrow.svg");
+          background-repeat: no-repeat;
+          width: 12px;
+          height: 7px;
+          transition: all 0.1s;
+          content: "";
+        }
+
+        &:focus-within::before {
+          transform: rotate(180deg);
+        }
+
+        &:focus-within::after {
+          @extend %focus-pseudoclass;
+        }
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-button {
+      position: relative;
+
+      width: 30px;
+      height: 30px;
+      background-color: inherit;
+      border: none;
+      padding: 0;
+
+      &:focus-visible {
+        outline: 2px solid $purple;
+      }
+
+      &-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.2;
+
+        &:hover {
+          opacity: 0.5;
+        }
+
+        &:active {
+          opacity: 1;
+        }
+      }
+
+      &-top &-icon {
+        background-image: url("../images/arrows/top-bold-arrow.svg");
+      }
+
+      &-bottom &-icon {
+        background-image: url("../images/arrows/bottom-bold-arrow.svg");
+      }
+    }
+  }
+
+  &__cards {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 360px);
+      gap: 44px 40px;
+
+      margin: 0;
+      margin-bottom: 44px;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-link {
+      position: relative;
+
+      display: flex;
+      flex-direction: column-reverse;
+      text-decoration: none;
+      color: $dark-gray;
+
+      &::before {
+        display: none;
+
+        position: absolute;
+        top: 161px;
+        left: 68px;
+        z-index: 1;
+
+        background-color: $yellow;
+
+        width: 224px;
+        height: 8px;
+
+        content: "";
+      }
+
+      &::after {
+        display: none;
+
+        position: absolute;
+        top: 155px;
+        left: 108px;
+        z-index: 2;
+
+        font-family: "Raleway";
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $black;
+
+        content: "Подробнее";
+      }
+
+      &:hover::before,
+      &:hover::after {
+        display: block;
+      }
+
+      &:active::before {
+        background-color: $orange;
+      }
+    }
+
+    &-link:hover &-image-container::before,
+    &-link:active &-image-container::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(240, 240, 240, 0.8);
+
+      content: "";
+    }
+
+    &-link:hover &-descr {
+      opacity: 0.6;
+    }
+
+    &-link:active &-descr {
+      opacity: 0.3;
+    }
+
+    &-link:focus-visible {
+      outline: 2px solid $purple;
+    }
+
+    &-descr {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      color: $black;
+      width: 226px;
+      margin: 0;
+    }
+
+    &-price {
+      font-size: 18px;
+      line-height: 21px;
+      font-weight: 400;
+    }
+
+    &-image {
+      width: 360px;
+      height: 380px;
+      margin-bottom: 32px;
+
+      &-container {
+        position: relative;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    padding: 18px 0;
+    background-color: inherit;
+    border: 3px solid #e5e5e5;
+
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $black;
+    outline: none;
+
+    margin-bottom: 44px;
+
+    &:hover:not(:disabled) {
+      border-color: $black;
+    }
+
+    &:active:not(:disabled) {
+      opacity: 0.3;
+      border-color: $black;
+    }
+
+    &:focus-visible::before {
+      @extend %focus-pseudoclass;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #ebebeb;
+
+    margin-bottom: 78px;
+
+    &-button {
+      position: relative;
+
+      padding: 25px;
+      background-color: inherit;
+      border: none;
+      outline: none;
+
+      font-family: "Raleway";
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: $black;
+
+      &:hover:not(:disabled) {
+        background-color: $gray;
+      }
+
+      &:active:not(:disabled) {
+        background-color: $gray;
+        opacity: 0.3;
+      }
+
+      &:focus-visible::before {
+        @extend %focus-pseudoclass;
+      }
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.3;
+      }
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-item {
+      position: relative;
+
+      padding: 10px 17px;
+    }
+
+    &-link {
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 20px;
+      color: $dark-gray;
+      opacity: 0.3;
+      outline: none;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0.1;
+      }
+
+      &--current {
+        opacity: 0.6;
+      }
+
+      &:focus-visible ~ &-focus::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border: 2px solid $purple;
+        content: "";
+      }
+    }
+  }
+}

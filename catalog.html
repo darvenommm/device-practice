@@ -200,73 +200,98 @@
               <h2 class="visually-hidden">Сортировка по параметру и список товаров.</h2>
               <div class="goods__sorting">
                 <h3 class="goods__sorting-title">сортировка</h3>
-                <select class="goods__sorting-select" name="sorting">
-                  <option value="popular">Популярные</option>
-                </select>
+                <div class="goods__sorting-select-container">
+                  <select class="goods__sorting-select" name="sorting">
+                    <option value="popular">Популярные</option>
+                  </select>
+                </div>
                 <div class="goods__sorting-buttons">
-                  <button class="goods__sorting-up">
+                  <button class="goods__sorting-button-top goods__sorting-button">
+                    <span class="goods__sorting-button-icon"></span>
                     <span class="visually-hidden">Нажми, чтобы вернуться к предыдущим товарам.</span>
                   </button>
-                  <button class="goods__sorting-up">
+                  <button class="goods__sorting-button-bottom goods__sorting-button">
+                    <span class="goods__sorting-button-icon"></span>
                     <span class="visually-hidden">Нажми, чтобы перейти к следующим товарам.</span>
                   </button>
                 </div>
               </div>
               <div class="goods__cards">
                 <h3 class="visually-hidden">Товары.</h3>
-                <ul class="goods__cards">
+                <ul class="goods__cards-list">
                   <li class="goods__cards-item">
-                    <div class="goods__cards-descr">
-                      <h4 class="goods__cards-title">Любительская селфи-палка</h4>
-                      <b class="goods__cards-price">500&nbsp;₽</b>
-                    </div>
-                    <img class="goods__cards-image" src="#" alt="">
+                    <a class="goods__cards-link" href="#">
+                      <div class="goods__cards-descr">
+                        <h4 class="goods__cards-title">Любительская<br> селфи-палка</h4>
+                        <b class="goods__cards-price">500&nbsp;₽</b>
+                      </div>
+                      <div class="goods__cards-image-container">
+                        <img class="goods__cards-image" src="./images/catalog/selfie-stick-with-phone.jpg" alt="">
+                      </div>
+                    </a>
                   </li>
                   <li class="goods__cards-item">
-                    <div class="goods__cards-descr">
-                      <h4 class="goods__cards-title">Профессиональная селфи-палка</h4>
-                      <b class="goods__cards-price">1&nbsp;500&nbsp;₽</b>
-                    </div>
-                    <img class="goods__cards-image" src="#" alt="">
+                    <a class="goods__cards-link" href="#">
+                      <div class="goods__cards-descr">
+                        <h4 class="goods__cards-title">Профессиональная<br> селфи-палка</h4>
+                        <b class="goods__cards-price">1&nbsp;500&nbsp;₽</b>
+                      </div>
+                      <div class="goods__cards-image-container">
+                        <img class="goods__cards-image" src="./images/catalog/selfie-stick.jpg" alt="">
+                      </div>
+                    </a>
                   </li>
                   <li class="goods__cards-item">
-                    <div class="goods__cards-descr">
-                      <h4 class="goods__cards-title">Непотопляемая селфи-палка</h4>
-                      <b class="goods__cards-price">2&nbsp;500&nbsp;₽</b>
-                    </div>
-                    <img class="goods__cards-image" src="#" alt="">
+                    <a class="goods__cards-link" href="#">
+                      <div class="goods__cards-descr">
+                        <h4 class="goods__cards-title">Непотопляемая<br> селфи-палка</h4>
+                        <b class="goods__cards-price">2&nbsp;500&nbsp;₽</b>
+                      </div>
+                      <div class="goods__cards-image-container">
+                        <img class="goods__cards-image" src="./images/catalog/selfie-stcik-with-camera.jpg" alt="">
+                      </div>
+                    </a>
                   </li>
                   <li class="goods__cards-item">
-                    <div class="goods__cards-descr">
-                      <h4 class="goods__cards-title">Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h4>
-                      <b class="goods__cards-price">1&nbsp;500&nbsp;₽</b>
-                    </div>
-                    <img class="goods__cards-image" src="#" alt="">
+                    <a class="goods__cards-link" href="#">
+                      <div class="goods__cards-descr">
+                        <h4 class="goods__cards-title">Селфи-палка &laquo;Следуй за мной&raquo;</h4>
+                        <b class="goods__cards-price">1&nbsp;500&nbsp;₽</b>
+                      </div>
+                      <div class="goods__cards-image-container">
+                        <img class="goods__cards-image" src="./images/catalog/selfie-hand.jpg" alt="">
+                      </div>
+                    </a>
                   </li>
                 </ul>
                 <button class="goods__button" type="button">Загрузить ещё</button>
                 <div class="goods__pagination">
-                  <button class="goods__pagination-prev" type="button">
+                  <button class="goods__pagination-button goods__pagination-prev" type="button" disabled>
                     <span class="visually-hidden">Нажми, чтобы перейти </span>Назад
                   </button>
                   <ol class="goods__pagination-list">
                     <li class="goods__pagination-item">
-                      <a class="goods__pagination-button" href="#">1</a>
+                      <a class="goods__pagination-link goods__pagination-link--current" href="#">1</a>
+                      <span class="goods__pagination-link-focus"></span>
                     </li>
                     <li class="goods__pagination-item">
-                      <a class="goods__pagination-button" href="#">2</a>
+                      <a class="goods__pagination-link" href="#">2</a>
+                      <span class="goods__pagination-link-focus"></span>
                     </li>
                     <li class="goods__pagination-item">
-                      <a class="goods__pagination-button" href="#">3</a>
+                      <a class="goods__pagination-link" href="#">3</a>
+                      <span class="goods__pagination-link-focus"></span>
                     </li>
                     <li class="goods__pagination-item">
-                      <a class="goods__pagination-button" href="#">...</a>
+                      <a class="goods__pagination-link" href="#">...</a>
+                      <span class="goods__pagination-link-focus"></span>
                     </li>
                     <li class="goods__pagination-item">
-                      <a class="goods__pagination-button" href="#">15</a>
+                      <a class="goods__pagination-link" href="#">15</a>
+                      <span class="goods__pagination-link-focus"></span>
                     </li>
                   </ol>
-                  <button class="goods__pagination-next" type="button">
+                  <button class="goods__pagination-button goods__pagination-next" type="button">
                     <span class="visually-hidden">Нажми, чтобы перейти </span> Вперёд
                   </button>
                 </div>
