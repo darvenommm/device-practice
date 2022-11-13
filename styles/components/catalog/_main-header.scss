@@ -1,0 +1,70 @@
+@import "../../base/variables";
+
+.main-header {
+  &__title {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: $black;
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 16px;
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      position: relative;
+
+      margin-right: 36px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin: 0;
+        cursor: default;
+      }
+
+      &:not(:last-child)::after {
+        position: absolute;
+        top: 11px;
+        right: -21px;
+
+        background-image: url("../images/arrows/breadcrumbs-arrow.svg");
+
+        opacity: 0.3;
+        width: 4px;
+        height: 8px;
+        content: "";
+      }
+    }
+
+    &-link {
+      position: relative;
+
+      text-decoration: none;
+      color: $black;
+      transition: all 0.2s;
+      outline: none;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+
+      &:focus-visible::after {
+        @extend %focus-pseudoclass;
+      }
+    }
+  }
+}

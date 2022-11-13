@@ -1,0 +1,256 @@
+@import "../../base/variables";
+
+.filter {
+  padding: 25px 60px 0;
+
+  &__title {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $black;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+  }
+
+  &__legend {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: $black;
+
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    padding-left: 36px;
+  }
+
+  &__price {
+    &-ranges {
+      position: relative;
+
+      margin-bottom: 21px;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+        background-color: $gray;
+
+        content: "";
+      }
+    }
+
+    &-range-line {
+      position: absolute;
+      left: 0;
+      right: 50%;
+      top: 0;
+
+      height: 2px;
+      background-color: $black;
+    }
+
+    &-range {
+      position: absolute;
+      z-index: 1;
+      top: -9px;
+      left: -7px;
+      right: -7px;
+      background-color: inherit;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      pointer-events: none;
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $black;
+        border-radius: 50%;
+        background-color: $gray;
+        pointer-events: auto;
+        cursor: grab;
+        transition: all 0.1s;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+
+      &:focus-visible::before {
+        @extend %focus-pseudoclass;
+      }
+    }
+
+    &-inputes {
+      display: flex;
+
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba($black, 0.3);
+
+      &-text {
+        margin-right: 4px;
+      }
+    }
+
+    &-input {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba($black, 0.3);
+      width: 50%;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      -moz-appearance: textfield;
+    }
+  }
+
+  &__color {
+    &-container {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-item {
+      margin-bottom: 17px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &-label {
+      position: relative;
+
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &-checkbox {
+      & ~ span::before {
+        position: absolute;
+        top: 1px;
+        left: 0;
+
+        width: 20px;
+        height: 20px;
+        border: 2px solid $black;
+        border-radius: 3px;
+        content: "";
+      }
+
+      &:checked ~ span::before {
+        background-image: url("../images/icons/checkbox.svg");
+        background-position: center 2px;
+        background-repeat: no-repeat;
+      }
+
+      &:disabled ~ span,
+      &:disabled ~ span::before {
+        opacity: 0.1;
+      }
+
+      &:focus-visible ~ span::after {
+        @extend %focus-pseudoclass;
+      }
+    }
+  }
+
+  &__bluetooth {
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-item {
+      position: relative;
+
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &-label {
+      position: relative;
+
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &-radio {
+      & ~ span::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        border-radius: 50%;
+        border: 2px solid $black;
+        width: 20px;
+        height: 20px;
+        content: "";
+      }
+
+      &:checked ~ span::before {
+        background-image: url("../images/icons/radio.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &:focus-visible ~ span::after {
+        @extend %focus-pseudoclass;
+      }
+    }
+  }
+
+  &__submit {
+    width: 210px;
+  }
+}

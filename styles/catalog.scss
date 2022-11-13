@@ -2,6 +2,7 @@
 @import "./components/link";
 @import "./components/header";
 @import "./components/catalog/main-header";
+@import "./components/catalog/filter";
 @import "./components/footer";
 
 body {
@@ -12,4 +13,25 @@ body {
 
 .main {
   flex: 1;
+}
+
+.catalog-outer {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $lighter;
+
+    content: "";
+  }
+}
+
+.catalog-inner {
+  display: grid;
+  grid-template-columns: 320px 1fr;
 }
