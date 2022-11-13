@@ -323,8 +323,6 @@
 
     &-item {
       position: relative;
-
-      padding: 10px 17px;
     }
 
     &-link {
@@ -334,6 +332,7 @@
       color: $dark-gray;
       opacity: 0.3;
       outline: none;
+      padding: 10px 17px;
 
       &:hover {
         opacity: 1;
