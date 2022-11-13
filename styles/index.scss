@@ -9,6 +9,16 @@
 @import "./components/index/mailing";
 @import "./components/footer";
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
 .hero {
   margin-bottom: 70px;
 }
