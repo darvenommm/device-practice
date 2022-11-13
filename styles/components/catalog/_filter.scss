@@ -75,7 +75,7 @@
 
     &-range-line {
       position: absolute;
-      left: 0;
+      left: 5px;
       right: 50%;
       top: 0;
 
@@ -87,8 +87,7 @@
       position: absolute;
       z-index: 1;
       top: -9px;
-      left: -7px;
-      right: -7px;
+      width: 100%;
       background-color: inherit;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -97,6 +96,21 @@
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $black;
+        border-radius: 50%;
+        background-color: $gray;
+        pointer-events: auto;
+        cursor: grab;
+        transition: all 0.1s;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+
+      &::-moz-range-thumb {
         -moz-appearance: none;
         width: 18px;
         height: 18px;
