@@ -12,7 +12,7 @@ const series = gulp.series;
 const scss = gulpSass(sass);
 const stylesPath = './styles';
 
-function compileScssFile() {
+function compileScssFiles() {
   return src(`${stylesPath}/*.scss`)
     .pipe(scss())
     .pipe(dest(stylesPath));
@@ -24,8 +24,8 @@ function clearStyles() {
 }
 
 function stylesWatcher() {
-  watch(`${stylesPath}/**/*.scss`, series(clearStyles, compileScssFile));
+  watch(`${stylesPath}/**/*.scss`, series(clearStyles, compileScssFiles));
 }
 
-export default series(clearStyles, compileScssFile, stylesWatcher);
+export default series(clearStyles, compileScssFiles, stylesWatcher);
 export const clear = clearStyles;
