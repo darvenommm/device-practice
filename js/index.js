@@ -1,5 +1,5 @@
 // slider
-const slider = new Slider(
+new Slider(
   '.hero__slider',
   '.hero__slider-item',
   '.hero__slider-prev',
@@ -8,6 +8,12 @@ const slider = new Slider(
   '.hero__slider-current-slide',
   'hero__slider-item--current',
   'hero__slider-pagination-button--active'
-);
+).start();
 
-slider.start();
+// tabs
+new TabsShower(
+  '.service__tab-button',
+  '.service__item',
+  'service__tab-button--active',
+  'service__item--current'
+).start();

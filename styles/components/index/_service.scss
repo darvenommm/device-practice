@@ -91,6 +91,10 @@
         transition: all 0.4s;
         transform: translateX(26px);
       }
+
+      &::before {
+        display: none;
+      }
     }
   }
 
