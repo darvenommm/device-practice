@@ -59,7 +59,7 @@
       <nav class="header__navigation">
         <div class="header__catalog">
           <p class="header__catalog-text">Каталог товаров</p>
-          <button class="header__catalog-button">
+          <button class="header__catalog-button" type="button">
             <svg class="header__catalog-plus" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z" fill="#000"/></svg>
             <svg class="header__catalog-minus hide" aria-hidden="true" width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0H0v2h16V0Z" fill="#000"/></svg>
             <span class="visually-hidden">При нажатие покажется список ссылок на каталоги товаров.</span>
@@ -450,5 +450,53 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal">
+      <h2 class="visually-hidden">Модальное окно с формой для доставки товара.</h2>
+      <form class="modal__form">
+        <p class="modal__title">Доставка под заказ</p>
+        <button class="modal__exit" type="button">
+          <span class="visually-hidden">Нажми, чтобы закрыть модальное окно.</span>
+        </button>
+        <div class="modal__top-container">
+          <div class="modal__input-container">
+            <label class="modal__label" for="modal__name">Ваше имя:</label>
+            <input class="modal__input modal__name" id="modal__name" type="text" name="name" placeholder="Введите имя">
+          </div>
+          <div class="modal__input-container">
+            <label class="modal__label" for="modal__email">Ваш e-mail:</label>
+            <input class="modal__input modal__email" id="modal__email" type="text" name="email" placeholder="Введите email">
+            <p class="modal__email-text">Забавный у вас адрес</p>
+          </div>
+        </div>
+        <div class="modal__bottom-container">
+          <div class="modal__input-container">
+            <label class="modal__label" for="modal__product">Что нужно привезти:</label>
+            <input class="modal__input modal__product" id="modal__product" type="text" name="product-descr" placeholder="В свободной форме">
+          </div>
+          <div class="modal__input-container">
+            <label class="modal__label" for="modal__count">
+              Количество:
+              <span class="modal__tooltip" role="tooltip" aria-labelledby="modal__tooltip-text"></span>
+            </label>
+            <p class="visually-hidden" id="modal__tooltip-text">
+              Постараемся найти, сколько нужно.
+              Привезём сколько получится по
+              требованиям к провозу багажа.
+            </p>
+            <div class="modal__count">
+              <button class="modal__input modal__count-minus" type="button">
+                <span class="visually-hidden">Нажми, чтобы уменьшить количество товаров для заказа на один.</span>
+              </button>
+              <input class="modal__input modal__count-input" id="modal__count" type="number" name="count" value="1">
+              <button class="modal__input modal__count-plus" type="button">
+                <span class="visually-hidden">Нажми, чтобы увеличить количество товаров для заказа на один.</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="link modal__submit" type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
