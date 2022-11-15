@@ -75,8 +75,8 @@
 
     &-range-line {
       position: absolute;
-      left: 5px;
-      right: 50%;
+      left: 0px;
+      right: 0;
       top: 0;
 
       height: 2px;
@@ -87,6 +87,7 @@
       position: absolute;
       z-index: 1;
       top: -9px;
+      left: -2px;
       width: 100%;
       background-color: inherit;
       -webkit-appearance: none;

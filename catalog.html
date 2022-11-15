@@ -9,6 +9,8 @@
   </head>
   <body>
     <script src="./js/header.js" defer></script>
+    <script src="./js/components/catalog/range-slider.js" defer></script>
+    <script src="./js/catalog.js" defer></script>
     <!-- header -->
     <header class="header container">
       <a class="logo header__logo" href="./index.html">
@@ -17,7 +19,7 @@
       </a>
       <div class="header__top-container">
         <div class="header__search">
-          <input class="header__search-input" id="header__search-input" type="text" placeholder="Поиск по сайту"
+          <input class="header__search-input" id="header__search-input" type="search" placeholder="Поиск по сайту"
           ><span class="header__search-input-before"></span
           ><button class="header__search-button" type="button">Найти</button>
           <label class="header__search-input-label" for="header__search-input">
@@ -136,10 +138,10 @@
                   </div>
                   <div class="filter__price-inputes">
                     <span class="filter__price-inputes-text">от</span
-                    ><input class="filter__price-input" type="number" name="min" value="0">
+                    ><input class="filter__price-input filter__price-input-min" type="number" name="min" value="0">
 
                     <span class="filter__price-inputes-text">до</span
-                    ><input class="filter__price-input" type="number" name="max" value="5000">
+                    ><input class="filter__price-input filter__price-input-max" type="number" name="max" value="5000">
                   </div>
                 </fieldset>
                 <fieldset class="filter__color filter__fieldset">
