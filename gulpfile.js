@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import sass from 'sass';
 import gulpSass from 'gulp-sass';
 import del from 'gulp-clean';
+import minCss from 'gulp-clean-css';
 
 const src = gulp.src;
 const dest = gulp.dest;
@@ -15,6 +16,7 @@ const stylesPath = './styles';
 function compileScssFiles() {
   return src(`${stylesPath}/*.scss`)
     .pipe(scss())
+    .pipe(minCss())
     .pipe(dest(stylesPath));
 }
 
