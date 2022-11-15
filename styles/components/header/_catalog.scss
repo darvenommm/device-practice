@@ -9,20 +9,6 @@
   width: 293px;
   margin-right: 60px;
 
-  &:focus-within {
-    & .header__catalog-lists-container {
-      display: block;
-    }
-
-    & .header__catalog-plus {
-      display: none;
-    }
-
-    & .header__catalog-minus {
-      display: block;
-    }
-  }
-
   &-text {
     font-family: "Raleway";
     font-weight: 800;

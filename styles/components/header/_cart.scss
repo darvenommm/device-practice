@@ -5,10 +5,6 @@
 
   display: flex;
 
-  &:focus-within &-popover-container {
-    display: block;
-  }
-
   &-button {
     position: relative;
 

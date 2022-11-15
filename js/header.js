@@ -12,6 +12,25 @@ class PopoverShower {
     });
   }
 
+  _addEventListenerForButtonFocus() {
+    this._button.addEventListener('focus', () => {
+      this._togglePopover();
+    });
+  }
+
+  _addEventListenerForButtonBlur() {
+    const onBlurButton = (event) => {
+      const relatedTarget = event.relatedTarget;
+      if (this._parent.contains(relatedTarget)) {
+        relatedTarget.addEventListener('blur', onBlurButton);
+      } else {
+        this._togglePopover();
+      }
+    }
+
+    this._button.addEventListener('blur', onBlurButton);
+  }
+
   _hidePopoverAfterMissClick() {
     document.body.addEventListener('click', (event) => {
       if (!this._parent.contains(event.target)) {
@@ -30,6 +49,8 @@ class PopoverShower {
 
   start() {
     this._addEventListenerForButtonClick();
+    this._addEventListenerForButtonFocus();
+    this._addEventListenerForButtonBlur();
     this._hidePopoverAfterMissClick();
   }
 }
