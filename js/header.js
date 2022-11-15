@@ -3,18 +3,30 @@ class PopoverShower {
     this._parent = document.querySelector(parentSelector);
     this._button = this._parent.querySelector(buttonSelector);
     this._popover = this._parent.querySelector(popoverSelector);
+    this._isOpen = false;
+    this._isOpenByFocus = false;
+  }
+
+  _addEventListenerForButtonFocus() {
+    this._button.addEventListener('focus', () => {
+      this._showPopover();
+      this._isOpenByFocus = true;
+    });
   }
 
   _addEventListenerForButtonClick() {
     this._button.addEventListener('click', (event) => {
       event.preventDefault();
-      this._togglePopover();
-    });
-  }
 
-  _addEventListenerForButtonFocus() {
-    this._button.addEventListener('focus', () => {
-      this._togglePopover();
+      if (this._isOpenByFocus) {
+        this._isOpen = true;
+        this._isOpenByFocus = false;
+      } else if (this._isOpen) {
+        this._hidePopover();
+      } else {
+        this._showPopover();
+        this._isOpen = true;
+      }
     });
   }
 
@@ -23,8 +35,10 @@ class PopoverShower {
       const relatedTarget = event.relatedTarget;
       if (this._parent.contains(relatedTarget)) {
         relatedTarget.addEventListener('blur', onBlurButton);
+      } else if (relatedTarget ===  null) {
+        return;
       } else {
-        this._togglePopover();
+        this._hidePopover();
       }
     }
 
@@ -41,15 +55,16 @@ class PopoverShower {
 
   _hidePopover() {
     this._popover.style.display = 'none';
+    this._isOpen = false;
   }
 
-  _togglePopover() {
-    this._popover.style.display = (this._popover.style.display === 'block') ? 'none' : 'block';
+  _showPopover() {
+    this._popover.style.display = 'block';
   }
 
   start() {
-    this._addEventListenerForButtonClick();
     this._addEventListenerForButtonFocus();
+    this._addEventListenerForButtonClick();
     this._addEventListenerForButtonBlur();
     this._hidePopoverAfterMissClick();
   }
@@ -68,26 +83,18 @@ class CatalogPopoverShower extends PopoverShower {
     super(parentSelector, buttonSelector, popoverSelector);
     this._plus = this._button.querySelector(plusSelector);
     this._minus = this._button.querySelector(minusSelector);
-    this._isChecked = false;
-  }
-
-  _togglePopover() {
-    super._togglePopover();
-    this._isChecked = !this._isChecked;
-    if (this._isChecked) {
-      this._plus.style.display = 'none';
-      this._minus.style.display = 'block'
-    } else {
-      this._plus.style.display = 'block';
-      this._minus.style.display = 'none'
-    }
   }
 
   _hidePopover() {
     super._hidePopover();
     this._plus.style.display = 'block';
     this._minus.style.display = 'none';
-    this._isChecked = false;
+  }
+
+  _showPopover() {
+    super._showPopover();
+    this._plus.style.display = 'none';
+    this._minus.style.display = 'block';
   }
 }
 
