@@ -1,0 +1,32 @@
+{
+  "cards": {
+    "1": {
+      "title": "Любительская селфи-палка",
+      "price": "500 ₽",
+      "link": "#",
+      "url": "./images/catalog/selfie-stick-with-phone.jpg",
+      "alt": "#"
+    },
+    "2": {
+      "title": "Профессиональная селфи-палка",
+      "price": "1 500 ₽",
+      "link": "#",
+      "url": "./images/catalog/selfie-stick.jpg",
+      "alt": "#"
+    },
+    "3": {
+      "title": "Непотопляемая<br> селфи-палка",
+      "price": "2 500 ₽",
+      "link": "#",
+      "url": "./images/catalog/selfie-stcik-with-camera.jpg",
+      "alt": "#"
+    },
+    "4": {
+      "title": "Селфи-палка &laquo;Следуй за мной&raquo;",
+      "price": "1 500 ₽",
+      "link": "#",
+      "url": "./images/catalog/selfie-hand.jpg",
+      "alt": "#"
+    }
+  }
+}
