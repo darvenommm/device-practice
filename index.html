@@ -451,52 +451,63 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <h2 class="visually-hidden">Модальное окно с формой для доставки товара.</h2>
-      <form class="modal__form">
-        <p class="modal__title">Доставка под заказ</p>
-        <button class="modal__exit" type="button">
-          <span class="visually-hidden">Нажми, чтобы закрыть модальное окно.</span>
-        </button>
-        <div class="modal__top-container">
-          <div class="modal__input-container">
-            <label class="modal__label" for="modal__name">Ваше имя:</label>
-            <input class="modal__input modal__name" id="modal__name" type="text" name="name" placeholder="Введите имя">
-          </div>
-          <div class="modal__input-container">
-            <label class="modal__label" for="modal__email">Ваш e-mail:</label>
-            <input class="modal__input modal__email" id="modal__email" type="text" name="email" placeholder="Введите email">
-            <p class="modal__email-text">Забавный у вас адрес</p>
-          </div>
-        </div>
-        <div class="modal__bottom-container">
-          <div class="modal__input-container">
-            <label class="modal__label" for="modal__product">Что нужно привезти:</label>
-            <input class="modal__input modal__product" id="modal__product" type="text" name="product-descr" placeholder="В свободной форме">
-          </div>
-          <div class="modal__input-container">
-            <label class="modal__label" for="modal__count">
-              Количество:
-              <span class="modal__tooltip" role="tooltip" aria-labelledby="modal__tooltip-text"></span>
-            </label>
-            <p class="visually-hidden" id="modal__tooltip-text">
-              Постараемся найти, сколько нужно.
-              Привезём сколько получится по
-              требованиям к провозу багажа.
-            </p>
-            <div class="modal__count">
-              <button class="modal__input modal__count-minus" type="button">
-                <span class="visually-hidden">Нажми, чтобы уменьшить количество товаров для заказа на один.</span>
-              </button>
-              <input class="modal__input modal__count-input" id="modal__count" type="number" name="count" value="1">
-              <button class="modal__input modal__count-plus" type="button">
-                <span class="visually-hidden">Нажми, чтобы увеличить количество товаров для заказа на один.</span>
-              </button>
+    <div class="modal-container hide">
+      <section class="modal">
+        <h2 class="visually-hidden">Модальное окно с формой для доставки товара.</h2>
+        <form class="modal__form">
+          <p class="modal__title">Доставка под заказ</p>
+          <button class="modal__exit" type="button">
+            <span class="visually-hidden">Нажми, чтобы закрыть модальное окно.</span>
+          </button>
+          <div class="modal__top-container">
+            <div class="modal__input-container">
+              <label class="modal__label modal__name">
+                <span class="modal__label-text">Ваше имя:</span>
+                <input class="modal__input" type="text" name="name" placeholder="Введите имя">
+              </label>
+            </div>
+            <div class="modal__input-container">
+              <label class="modal__label modal__email">
+                <span class="modal__label-text">Ваш e-mail:</span>
+                <input class="modal__input modal__email-input" type="email" name="email" placeholder="Введите email">
+                <span class="modal__email-text">Забавный у вас адрес</span>
+              </label>
             </div>
           </div>
-        </div>
-        <button class="link modal__submit" type="submit">Отправить</button>
-      </form>
-    </section>
+          <div class="modal__bottom-container">
+            <div class="modal__input-container">
+              <label class="modal__label">
+                <span class="modal__label-text">Что нужно привезти:</span>
+                <input class="modal__input" type="text" name="product-descr" placeholder="В свободной форме">
+              </label>
+            </div>
+            <div class="modal__input-container">
+              <label class="modal__label" for="modal__count">
+                <span class="modal__label-text">
+                  Количество:
+                  <span class="modal__tooltip-container">
+                    <span class="modal__tooltip hide">
+                      Постараемся найти, сколько нужно.
+                      Привезём сколько получится по&nbsp;требованиям
+                      к&nbsp;провозу багажа.
+                    </span>
+                  </span>
+                </span>
+              </label>
+              <div class="modal__count">
+                <button class="modal__input modal__count-minus" type="button">
+                  <span class="visually-hidden">Нажми, чтобы уменьшить количество товаров для заказа на один.</span>
+                </button>
+                <input class="modal__input modal__count-input" id="modal__count" type="number" name="count" value="1">
+                <button class="modal__input modal__count-plus" type="button">
+                  <span class="visually-hidden">Нажми, чтобы увеличить количество товаров для заказа на один.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="link modal__submit" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
   </body>
 </html>

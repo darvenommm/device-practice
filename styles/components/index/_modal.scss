@@ -46,6 +46,19 @@
     background-color: inherit;
     background-image: url("../images/icons/close.svg");
     background-repeat: no-repeat;
+    outline: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &:focus-visible::before {
+      @extend %focus-pseudoclass;
+    }
   }
 
   &__top-container {
@@ -57,6 +70,8 @@
   }
 
   &__label {
+    position: relative;
+
     display: block;
 
     font-weight: 700;
@@ -64,10 +79,17 @@
     line-height: 20px;
     letter-spacing: -0.02em;
     color: $black;
-    margin-bottom: 14px;
+    cursor: pointer;
+
+    &-text {
+      display: block;
+      margin-bottom: 14px;
+    }
   }
 
   &__input {
+    position: relative;
+
     padding: 20px;
     width: 100%;
     border: none;
@@ -83,33 +105,124 @@
       line-height: 20px;
       color: rgba($black, 0.3);
     }
+
+    &:hover:not(:disabled) {
+      background-color: $gray;
+    }
+
+    &:focus-visible {
+      z-index: 1;
+      outline: 2px solid $purple;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      outline: 2px solid $error;
+    }
+  }
+
+  &__name {
+    &::after {
+      position: absolute;
+      top: 60px;
+      right: 25px;
+      z-index: 2;
+
+      background-image: url("../images/icons/account.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      width: 13px;
+      height: 12px;
+      opacity: 0.3;
+      content: "";
+    }
   }
 
   &__email {
     &-text {
       font-size: 14px;
       line-height: 20px;
+      font-weight: 400;
       color: $black;
       margin: 0;
+    }
+
+    &-input:invalid ~ &-text {
+      color: $error;
+    }
+
+    &::after {
+      position: absolute;
+      top: 60px;
+      right: 25px;
+      z-index: 2;
+
+      width: 15px;
+      height: 12px;
+      opacity: 0.3;
+
+      background-image: url("../images/icons/mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      content: "";
     }
   }
 
   &__tooltip {
-    position: relative;
-    top: 7px;
+    &-container  {
+      position: absolute;
+      top: -3px;
+      right: 36px;
 
-    display: inline-block;
+      display: inline-block;
 
-    width: 26px;
-    height: 26px;
-    background-color: $yellow;
-    background-image: url("../images/icons/info.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    cursor: pointer;
+      width: 26px;
+      height: 26px;
+      background-color: $yellow;
+      background-image: url("../images/icons/info.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      cursor: pointer;
 
-    margin-left: 8px;
+      margin-left: 8px;
+    }
+
+    &-container:hover > & {
+      display: block;
+    }
+
+    position: absolute;
+    bottom: -170px;
+    right: -25px;
+    z-index: 3;
+
+    color: $white;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+
+    background-color: $black;
+    padding: 19px;
+    width: 200px;
+
+    &::before {
+      position: absolute;
+      top: -3px;
+      right: 30px;
+
+      background-color: $black;
+
+      width: 15px;
+      height: 15px;
+      transform: rotate(45deg);
+      content: "";
+    }
   }
 
   &__bottom-container {
