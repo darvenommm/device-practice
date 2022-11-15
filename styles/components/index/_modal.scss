@@ -1,18 +1,20 @@
 @import "../../base/variables";
 
 .modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  &__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  background-color: rgba(240, 240, 240, 0.9);
+    background-color: rgba(240, 240, 240, 0.9);
+  }
 
   &__form {
     position: relative;

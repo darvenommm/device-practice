@@ -11,6 +11,7 @@
     <script src="./js/header.js" defer></script>
     <script src="./js/components/index/slider.js" defer></script>
     <script src="./js/components/index/TabsShower.js" defer></script>
+    <script src="./js/components/index/modal.js" defer></script>
     <script src="./js/index.js" defer></script>
     <!-- header -->
     <header class="header container">
@@ -451,8 +452,9 @@
       </div>
     </footer>
 
-    <div class="modal-container hide">
-      <section class="modal">
+
+    <section class="modal hide">
+      <div class="modal__container">
         <h2 class="visually-hidden">Модальное окно с формой для доставки товара.</h2>
         <form class="modal__form">
           <p class="modal__title">Доставка под заказ</p>
@@ -507,7 +509,7 @@
           </div>
           <button class="link modal__submit" type="submit">Отправить</button>
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
   </body>
 </html>
